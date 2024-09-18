@@ -11,6 +11,7 @@ public class RandomDotGUI extends JFrame implements ActionListener {
     private JPanel canvas = new JPanel();
     private JButton draw = new JButton("Draw");
     private JButton clear = new JButton("Clear");
+    private final int NDOTS = 1000;
 
     public RandomDotGUI() {
         getContentPane().setLayout(new BorderLayout());
@@ -26,8 +27,9 @@ public class RandomDotGUI extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == draw) {
-            dotty = new Dotty(canvas);
-            dotty.draw();
+            dotty = new Dotty(canvas, NDOTS);
+            Thread dottyThread = new Thread(dotty);
+            dottyThread.start();
         } else {
             dotty.clear();
         }
