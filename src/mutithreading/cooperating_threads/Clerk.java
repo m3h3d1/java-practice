@@ -10,7 +10,7 @@ public class Clerk implements Runnable {
             try {
                 Thread.sleep((int)(Math.random() * 50));
                 if(takeANumber.customerWaiting()) {
-                    System.out.println("Clerk srving ticket " + takeANumber.nextCustomer());
+                    takeANumber.nextCustomer();
                 }
             } catch (InterruptedException e) {
                 System.out.println(e.getMessage());

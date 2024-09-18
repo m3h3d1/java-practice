@@ -4,15 +4,17 @@ public class TakeANumber {
     private int next = 0;
     private int serving = 0;
 
-    public synchronized int nextNumber() {
+    public synchronized int nextNumber(int custId) {
         ++next;
+        System.out.println("Customer " + custId + " takes ticket " + next);
         return next;
     }
-    public int nextCustomer() {
+    public synchronized int nextCustomer() {
         ++serving;
+        System.out.println("    Clerk serving ticket " + serving);
         return serving;
     }
-    public boolean customerWaiting() {
+    public synchronized boolean customerWaiting() {
         return next > serving;
     }
 }

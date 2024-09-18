@@ -11,7 +11,7 @@ public class Customer implements Runnable {
     public void run() {
         try {
             Thread.sleep((int) (Math.random() * 1000));
-            System.out.println("Customer " + id + " takes ticket " + takeANumber.nextNumber());
+            takeANumber.nextNumber(id);
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
