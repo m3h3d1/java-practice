@@ -7,15 +7,22 @@ class TakeANumber {
     public synchronized int nextNumber(int custId) {
         ++next;
         System.out.println("Customer " + custId + " takes ticket " + next);
+        notify();
         return next;
     }
     public synchronized int nextCustomer() {
-        ++serving;
-        System.out.println("    Clerk serving ticket " + serving);
-        return serving;
-    }
-    public synchronized boolean customerWaiting() {
-        return next > serving;
+        try {
+            while(next <= serving) {
+                System.out.println("    Clerk waiting");
+                wait();
+            }
+        } catch (InterruptedException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            ++serving;
+            System.out.println("    Clerk serving ticket " + serving);
+            return serving;
+        }
     }
 }
 class Customer implements Runnable {
@@ -43,10 +50,8 @@ class Clerk implements Runnable {
     public void run() {
         while (true) {
             try {
-                Thread.sleep((int)(Math.random() * 50));
-                if(takeANumber.customerWaiting()) {
-                    takeANumber.nextCustomer();
-                }
+                Thread.sleep((int)(Math.random() * 2000));
+                takeANumber.nextCustomer();
             } catch (InterruptedException e) {
                 System.out.println(e.getMessage());
             }
