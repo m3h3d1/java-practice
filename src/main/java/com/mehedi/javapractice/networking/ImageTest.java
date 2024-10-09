@@ -1,4 +1,4 @@
-package networking;
+package com.mehedi.javapractice.networking;
 
 import java.awt.*;
 import java.io.IOException;

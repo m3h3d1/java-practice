@@ -1,4 +1,4 @@
-package mutithreading.practice1;
+package com.mehedi.javapractice.mutithreading.practice1;
 
 class MyThread extends Thread {
     public MyThread() {

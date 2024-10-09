@@ -1,4 +1,4 @@
-package networking;
+package com.mehedi.javapractice.networking;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;

@@ -1,4 +1,4 @@
-package mutithreading.pong_game;
+package com.mehedi.javapractice.mutithreading.pong_game;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package mutithreading.cooperating_threads;
+package com.mehedi.javapractice.mutithreading.cooperating_threads;
 
 class TakeANumber {
     private int next = 0;

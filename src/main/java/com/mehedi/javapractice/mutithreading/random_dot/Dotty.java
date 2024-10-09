@@ -1,4 +1,4 @@
-package mutithreading.random_dot;
+package com.mehedi.javapractice.mutithreading.random_dot;
 
 import javax.swing.*;
 import java.awt.*;

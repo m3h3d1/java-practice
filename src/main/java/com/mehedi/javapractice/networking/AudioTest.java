@@ -1,4 +1,4 @@
-package networking;
+package com.mehedi.javapractice.networking;
 
 import javax.sound.sampled.*;
 import java.io.IOException;

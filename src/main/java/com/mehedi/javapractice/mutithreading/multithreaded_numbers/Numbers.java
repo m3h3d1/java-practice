@@ -1,4 +1,4 @@
-package mutithreading.multithreaded_numbers;
+package com.mehedi.javapractice.mutithreading.multithreaded_numbers;
 
 public class Numbers {
     public static void main(String[] args) {
