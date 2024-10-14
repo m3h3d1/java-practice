@@ -1,5 +1,9 @@
 package com.mehedi.javapractice.designpattern.creational.factory;
 
+import com.mehedi.javapractice.designpattern.creational.factory.document.Document;
+import com.mehedi.javapractice.designpattern.creational.factory.document.PDFDocument;
+import com.mehedi.javapractice.designpattern.creational.factory.document.Spreadsheet;
+import com.mehedi.javapractice.designpattern.creational.factory.document.WordDocument;
 import org.junit.jupiter.api.Test;
 
 public class DocumentFactoryTest {
