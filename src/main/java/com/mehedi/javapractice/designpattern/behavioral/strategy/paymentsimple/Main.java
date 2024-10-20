@@ -4,7 +4,7 @@ import com.mehedi.javapractice.designpattern.behavioral.strategy.paymentsimple.s
 import com.mehedi.javapractice.designpattern.behavioral.strategy.paymentsimple.strategies.PayByCreditCard;
 import com.mehedi.javapractice.designpattern.behavioral.strategy.paymentsimple.strategies.PayByPayPal;
 
-public class ECommerceApp {
+public class Main {
     public static void main(String[] args) {
         PaymentContext context = new PaymentContext();
 
