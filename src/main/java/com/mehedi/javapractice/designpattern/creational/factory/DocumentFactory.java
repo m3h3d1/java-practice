@@ -1,5 +1,10 @@
 package com.mehedi.javapractice.designpattern.creational.factory;
 
+import com.mehedi.javapractice.designpattern.creational.factory.document.Document;
+import com.mehedi.javapractice.designpattern.creational.factory.document.PDFDocument;
+import com.mehedi.javapractice.designpattern.creational.factory.document.Spreadsheet;
+import com.mehedi.javapractice.designpattern.creational.factory.document.WordDocument;
+
 public class DocumentFactory {
     public Document getDocument(String documentType) {
         if (documentType == null) return null;
